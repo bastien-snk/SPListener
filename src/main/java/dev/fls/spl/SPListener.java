@@ -76,7 +76,8 @@ public final class SPListener implements Listener {
      *
      * @param listener
      */
-    public void registerListener(PacketListener listener) {
+    public static void registerListener(PacketListener listener) {
+        if(!registered) return;
         List<Method> methods = new ArrayList<>();
 
         for(Method method : listener.getClass().getMethods()) {
@@ -85,7 +86,7 @@ public final class SPListener implements Listener {
             methods.add(method);
         }
 
-        listeners.put(listener, methods);
+        getInstance().getListeners().put(listener, methods);
     }
 
     /**
