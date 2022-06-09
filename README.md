@@ -97,3 +97,7 @@ public class ExampleListener implements PacketListener {
 ```
 
 🎉 There you go, now you can listen to any packet and make the changes you want!
+
+## 📝 Credits
+
+-   [AndrobaL](https://github.com/androbal)
